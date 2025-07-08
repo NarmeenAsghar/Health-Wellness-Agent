@@ -1,0 +1,12 @@
+[project]
+name = "health_agent"
+version = "0.1.0"
+description = "Health & Wellness Planner Agent using OpenAI Agents SDK"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents==0.1.0",  # Do NOT use strict Pydantic config in tool outputs
+    "pydantic==2.11.7",      # Use v2, avoid extra=\"forbid\" in models
+    "streamlit>=1.30.0",     # For UI
+    "fpdf2>=2.7.6",          # For PDF report generation
+]
