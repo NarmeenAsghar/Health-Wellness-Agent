@@ -1,108 +1,84 @@
 # 💪 Health & Wellness Planner Agent - CLI Version
 
-A comprehensive command-line interface for an AI-powered health and wellness planning agent built with OpenAI Agents SDK.
+An AI-powered assistant built to promote healthy living by providing expert-like guidance, answering medical queries, and suggesting personalized wellness advice. This project uses language models to simulate a natural and helpful conversation with users.
 
-## 🚀 Features
+## 🌟 Key Features
 
-* **User Registration & Login**: Individual user accounts with email/password authentication
-* **Multi-Agent System**: Main health planner with specialized agents for nutrition, injury support, and escalation
-* **Modular Tools**: Goal analysis, meal planning, workout recommendations, progress tracking, and scheduling
-* **Context Management**: Persistent user sessions with SQLite database
-* **Conversation History**: Complete chat history tracking and persistence
-* **PDF Reports**: Generate comprehensive health reports for users
-* **Command Interface**: Easy-to-use CLI commands for common tasks
-* **Progress Tracking**: Individual user progress monitoring
+- **🤖 AI Medical Q&A**  
+  Ask health-related questions and receive reliable, AI-powered responses.
 
-## 🛠️ Installation
+- **🍏 Lifestyle Coaching**  
+  Get science-backed suggestions on diet, fitness, mental well-being, hydration, and sleep.
 
-1. **Clone the repository:**
+- **🩺 Symptom Checker**  
+  Describe your symptoms to receive general advice and possible causes (for awareness only).
 
-   ```bash
-   git clone <repository-url>
-   cd health_agent
-   ```
+- **💬 Conversational Interface**  
+  Seamlessly interact via natural language in the command line or web-based UI (if added).
 
-2. **Install dependencies:**
+## ⚙️ Installation
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/Health_Advisor_Agent.git
+cd Health_Advisor_Agent
+````
 
-3. **Set up environment variables:**
-   Create a `.env` file in the project root:
-
-   ```
-   OPENAI_API_KEY=your_openai_api_key_here
-   ```
-
-## 🎯 Usage
-
-### Start the CLI Application
+### 2. Install dependencies
 
 ```bash
-uv run cli.py
+pip install -r requirements.txt
 ```
 
-### User Registration & Login
+### 3. Add your OpenAI credentials
 
-* **Register**: Create a new account with your name, email, and password
-* **Login**: Use your email or user ID to access your account
-* **Session Management**: Your conversation history and progress are automatically saved
-
-### Available Commands
-
-| Command    | Description                              |
-| ---------- | ---------------------------------------- |
-| `register` | Register a new user account              |
-| `login`    | Login with email and password            |
-| `login-id` | Login with user ID                       |
-| `users`    | Show all registered users (admin)        |
-| `report`   | Download your health report (PDF + JSON) |
-| `context`  | Show your current context and data       |
-| `clear`    | Clear conversation history               |
-| `logout`   | Logout current user                      |
-| `help`     | Show help information                    |
-| `quit`     | Exit the application                     |
-
-### Chat Commands
-
-After logging in, you can chat directly with the AI agent! Just type your message and press Enter.
-
-**Example conversation:**
+Create a `.env` file in the project root:
 
 ```
-💬 You: I want to lose 5kg in 2 months  
-🤖 Agent: I'll help you create a plan to lose 5kg in 2 months! Let me analyze your goal...
-
-💬 You: Can you create a meal plan for me?  
-🤖 Agent: Here's your personalized vegetarian meal plan...
-
-💬 You: What about a workout routine?  
-🤖 Agent: Here's a workout routine designed for weight loss...
+OPENAI_API_KEY=your_openai_api_key
 ```
 
-## 🏗️ Architecture Overview
+### 4. Run the application
 
-* **Agents**: Main planner + Nutrition, Injury, and Escalation agents
-* **Tools**: Goal analyzer, meal planner, workout recommender, scheduler, tracker
-* **Database**: SQLite for user sessions and chat logs
-* **Context**: Keeps track of user goals, preferences, and progress
-* **PDF/JSON Reports**: Export user progress and plans
+```bash
+python main.py
+```
 
-## 📝 Requirements
 
-* Python 3.8+
-* OpenAI API key
-* Dependencies listed in `requirements.txt`
+## 💡 How to Use
+
+Once the app is running, simply start chatting:
+
+* `What are the symptoms of flu?`
+* `How much water should I drink daily?`
+* `Give me a healthy vegetarian meal plan.`
+
+The agent will analyze your request and respond with structured, contextual advice.
+
+## 🧰 Tech Stack
+
+* **Python 3.x**
+* **OpenAI API** (e.g., GPT-3.5/4 via `openai` SDK)
+* Optional: **Flask** or **Streamlit** for UI
+* **dotenv** for environment configuration
+* Other dependencies listed in `requirements.txt`
+
+## ⚠️ Disclaimer
+
+> This application is for **educational and informational purposes only**.
+> It does **not replace medical consultation**. Always seek guidance from a qualified healthcare provider.
+
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+Contributions are welcome!
 
-## 📄 License
+* Fork the repository
+* Create a feature branch
+* Commit and push your changes
+* Submit a pull request
 
-This project is licensed under the MIT License.
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
